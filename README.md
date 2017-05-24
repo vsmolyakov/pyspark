@@ -10,11 +10,11 @@ This repo is a collection of pySpark resources.
 </p>
 
 References:  
-*https://spark.apache.org/docs/latest/programming-guide.html#transformations*
+*https://spark.apache.org/docs/latest/programming-guide.html#transformations*  
 *https://spark.apache.org/docs/latest/ml-guide.html*
  
 ### Dependencies
 
-PySpark 2.1.1
+PySpark 2.1.1  
 Python 2.7
 
