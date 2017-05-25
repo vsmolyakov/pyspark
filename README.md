@@ -26,6 +26,20 @@ RMSE was computed for different ALS ranks in order to select the best model, whi
 References:  
 *https://spark.apache.org/docs/latest/mllib-collaborative-filtering.html*  
 
+**Distributed Logistic Regression**
+
+LBFGS Logistic Regression was used to classify the 20newsgroups dataset according to one of 20 topics. Each document in a corpus was converted to a tf-idf vector labelled by the corresponding topic for training. 
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/pyspark/blob/master/figures/20newsgroups.png" />
+</p>
+
+A test accuracy was computed by predicting the topic label based on test tf-idf document vectors.
+
+References:  
+*https://spark.apache.org/docs/latest/mllib-linear-methods.html#logistic-regression*  
+
+
 
 **Misc**
 
