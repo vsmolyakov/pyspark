@@ -34,7 +34,7 @@ LBFGS Logistic Regression was used to classify the 20newsgroups dataset accordin
 <img src="https://github.com/vsmolyakov/pyspark/blob/master/figures/20newsgroups.png" />
 </p>
 
-A test accuracy was computed by predicting the topic label based on test tf-idf document vectors.
+A test accuracy was computed by predicting the topic label based on test tf-idf document vectors. The figure above shows a t-SNE visualization of the 20newsgroups corpus.
 
 References:  
 *https://spark.apache.org/docs/latest/mllib-linear-methods.html#logistic-regression*  
