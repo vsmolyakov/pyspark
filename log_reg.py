@@ -38,17 +38,19 @@ def main():
     X_all = np.hstack([train_labels, X_tfidf])
 
     #distribute the data    
+    sc = SparkContext('local', 'log_reg')    
     rdd = sc.parallelize(X_all)    
     labeled_corpus = rdd.map(parse_doc)
     train_RDD, test_RDD = labeled_corpus.randomSplit([8, 2], seed=0)
 
     #distributed logistic regression
-    model = LogisticRegressionWithLBFGS.train(train_RDD)
+    print "training logistic regression..."
+    model = LogisticRegressionWithLBFGS.train(train_RDD, regParam=1, regType='l1', numClasses=len(categories))
 
     #evaluated the model on test data
     labels_and_preds = test_RDD.map(lambda p: (p.label, model.predict(p.features)))    
     test_err = labels_and_preds.filter(lambda (v, p): v != p).count() / float(test_RDD.count())
-    print "test error: ", test_err
+    print "log-reg test error: ", test_err
     
     #model.save(sc, './log_reg_lbfgs_model')
 
