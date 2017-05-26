@@ -44,8 +44,7 @@ References:
 **Misc**
 
 [RDD aggregation](https://github.com/vsmolyakov/pyspark/blob/master/aggregate.py), [RDD filter](https://github.com/vsmolyakov/pyspark/blob/master/basic_filter.py), [RDD mapper](https://github.com/vsmolyakov/pyspark/blob/master/mapper.py),     
-[word count](https://github.com/vsmolyakov/pyspark/blob/master/word_count.py), [term document matrix](https://github.com/vsmolyakov/pyspark/blob/master/term_doc.py), [average](https://github.com/vsmolyakov/pyspark/blob/master/average.py), [outliers](https://github.com/vsmolyakov/pyspark/blob/master/outliers.py)
-
+[word count](https://github.com/vsmolyakov/pyspark/blob/master/word_count.py), [term document matrix](https://github.com/vsmolyakov/pyspark/blob/master/term_doc.py), [average](https://github.com/vsmolyakov/pyspark/blob/master/average.py), [outliers](https://github.com/vsmolyakov/pyspark/blob/master/outliers.py), [pi_est](https://github.com/vsmolyakov/pyspark/blob/master/pi_est.py)
  
 ### Dependencies
 
