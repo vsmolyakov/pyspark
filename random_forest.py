@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 
 from pyspark import SparkContext
+from pyspark.sql import SQLContext
 from pyspark.sql import SparkSession
 from pyspark.sql import Row
 
@@ -14,12 +15,15 @@ from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 if __name__ == "__main__":
     
     sc = SparkContext('local', 'dataframe')
+    sqlContext = SQLContext(sc)
+    
     spark = SparkSession\
         .builder\
         .appName("RandomForestClassifier")\
         .getOrCreate()
         
     #dataset = sc.textFile("./data/titanic.csv", 1)
+    #dataset = sqlContext.read.format('com.databricks.spark.csv').options(header='true').load('./data/titanic.csv')
     dataset = pd.read_csv("./data/titanic.csv")    
     dataset = dataset.drop(['PassengerId','Name','Ticket','Cabin'], axis=1)
     
