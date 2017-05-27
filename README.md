@@ -39,6 +39,19 @@ A test accuracy was computed by predicting the topic label based on test tf-idf 
 References:  
 *https://spark.apache.org/docs/latest/mllib-linear-methods.html#logistic-regression*  
 
+**Distributed Random Forest**
+
+A random forest classifier was used to predict survival on the titanic using features such as age, class, ticket fare and others. The dataset was converted to Spark dataframe and the features were aggregated with vector assembler.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/pyspark/blob/master/figures/random_forest.png" />
+</p>
+
+A random forest with 100 trees and a max depth of 6 was used to make binary predictions using the Spark ML library.
+
+References:  
+*https://spark.apache.org/docs/latest/ml-classification-regression.html#random-forest-classifier*  
+
 
 
 **Misc**
