@@ -52,6 +52,18 @@ A random forest with 100 trees and a max depth of 6 was used to make binary pred
 References:  
 *https://spark.apache.org/docs/latest/ml-classification-regression.html#random-forest-classifier*  
 
+**Multi Layer Perceptron**
+
+A Multi Layer Perceptron (MLP) was used to predict a binary label based on the titanic kaggle dataset. Spark data frames were used to read in and prepare the data for classification
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/pyspark/blob/master/figures/mlp.png" />
+</p>
+
+The MLP was configured with two hidden layers, 7 input and 2 output neurons. It achieved an occuracy of over 80% on the validation set with 100 training iterations. 
+
+References:  
+*https://spark.apache.org/docs/latest/ml-classification-regression.html#multilayer-perceptron-classifier* 
 
 
 **Misc**
