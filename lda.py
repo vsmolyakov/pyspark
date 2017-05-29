@@ -4,6 +4,7 @@ from pyspark.sql import SQLContext
 from pyspark.sql import SparkSession
 from pyspark.sql import Row
 
+import re
 import numpy as np
 from time import time
 from sklearn.datasets import fetch_20newsgroups
@@ -37,6 +38,7 @@ if __name__ == "__main__":
     
     #distribute data
     corpus_rdd = sc.parallelize(train_corpus)
+    corpus_rdd = corpus_rdd.map(lambda doc: re.sub(r"[^A-Za-z]", " ", doc))
     corpus_rdd = corpus_rdd.map(lambda doc: u"".join(doc).encode('utf-8').strip())
         
     rdd_row = corpus_rdd.map(lambda doc: Row(raw_corpus=str(doc)))
