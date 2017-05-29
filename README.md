@@ -66,6 +66,20 @@ References:
 *https://spark.apache.org/docs/latest/ml-classification-regression.html#multilayer-perceptron-classifier* 
 
 
+**Distributed LDA**
+
+A distributed Latent Dirichlet Allocation (LDA) topic model was fit on the 20 newsgroups dataset. The training data was preprocessed using a tokenizer, stop-word remover and a tf-idf transformer.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/pyspark/blob/master/figures/lda_topics.png" />
+</p>
+
+The number of topics was set to K = 20. The figure above shows a word-cloud of topics learned from the 20 newsgroups dataset.
+
+References:  
+*https://spark.apache.org/docs/latest/ml-clustering.html#latent-dirichlet-allocation-lda* 
+
+
 **Misc**
 
 [RDD aggregation](https://github.com/vsmolyakov/pyspark/blob/master/aggregate.py), [RDD filter](https://github.com/vsmolyakov/pyspark/blob/master/basic_filter.py), [RDD mapper](https://github.com/vsmolyakov/pyspark/blob/master/mapper.py),     
