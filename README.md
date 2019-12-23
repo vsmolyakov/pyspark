@@ -1,9 +1,9 @@
-# pyspark
-pyspark
+# spark
+pyspark and scala spark
 
 ### Description
 
-This repo is a collection of pySpark resources.
+This repo is a collection of Spark resources.
 
 <p align="center">
 <img src="https://github.com/vsmolyakov/pyspark/blob/master/figures/spark.png" />
